@@ -58,27 +58,18 @@ class Getfollowers(CreateDriver):
             time.sleep(2)
             boolValue= True
         except:
-            print("girişte hata var")
+            
             boolValue = False
         time.sleep(2)
 
-        """
-        try:
-            acma = self.browser.find_element_by_xpath("//*[@id='react-root']/section/main/div/div/div/div/button")
-            if acma:
-                acma.click()
-                time.sleep(2)
-                print("kapatıldı 1")
-        except:
-            print("konum kapamada hata var ")"""
         try:
             acma1 = self.browser.find_element_by_xpath("/html/body/div[4]/div/div/div/div[3]/button[2]")
             if acma1:
                 acma1.click()
                 time.sleep(2)
-                print("kapatıldı 2")
+                
         except:
-            print("bildirm kapatmada hata var ")
+            
 
         try:
             profile1 = self.browser.find_element_by_xpath("//*[@id='react-root']/section/nav/div[2]/div/div/div[3]/div/div[5]")
@@ -89,22 +80,21 @@ class Getfollowers(CreateDriver):
             time.sleep(2)
             boolValue = True
         except:
-            print("profile girişte hata var")
-            #boolValue = False
+           
         try:
             profile= self.browser.find_element_by_xpath("//*[@id='react-root']/div/div/section/nav/div[2]/div/div/div[3]/div/div[5]")
             profile.click()
             time.sleep(2)
-            print("profil fotografına tıklandı")
+           
             profile_button= self.browser.find_element_by_css_selector(".-qQT3")
             profile_button.click()
-            print("profile butonuna tıklandı")
+           
 
             time.sleep(2)
             boolValue = True
         except:
-            print("profile girişte hata var")
-            #boolValue = False
+            
+           
 
         try:
             """**************************************TAKİP EDENLER******************************************"""
@@ -135,7 +125,7 @@ class Getfollowers(CreateDriver):
             self.browser.back()
             boolValue = True
         except:
-            print("TAKİP EDEN KİŞİLERİ almada hata var")
+            
             boolValue = False
 
         try:
@@ -160,7 +150,7 @@ class Getfollowers(CreateDriver):
             time.sleep(1)
             boolValue = True
         except:
-            print("TAKİP EDİLEN KİŞİLERİ ALMADA HATA VAR")
+          
             boolValue = False
         try:
             global unfollow
@@ -181,7 +171,7 @@ class Getfollowers(CreateDriver):
             boolValue = True
         except:
             boolValue = False
-            print("unfollower bulmada hata var")
+            
         self.browser.back()
         if boolValue ==False:
             browser.close()
@@ -206,7 +196,7 @@ class Getfollowers(CreateDriver):
 
 
         except:
-            print("hata aldık.")
+            
             self.browserbool=True
             return self.browserbool
         
