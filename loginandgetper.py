@@ -212,7 +212,7 @@ class Getfollowers(CreateDriver):
         
 
         except:
-            print("there is a mistake")
+           
 
         
 
